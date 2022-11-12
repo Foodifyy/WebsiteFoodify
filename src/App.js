@@ -6,6 +6,7 @@ import NavBar from './components/navbr';
 import ScrollToTop from './components/scrollToTop';
 import Service from './components/service';
 import UserPreview from './components/userpreview';
+import Testimonial from './components/Testimonial';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <UserPreview/>
         <Service/>
         <AboutUs/>
+        <Testimonial/>
         <ContactUs/>   
       </div>
         { scrollToTopButton && <ScrollToTop setScrollToTopButton={setScrollToTopButton}/>}
