@@ -1,11 +1,11 @@
 import React from 'react';
-import '../style/tesimonial.css'
+import '../style/testimonial.css'
 
 function Testimonial() {
   return (
         <div id="testimonial">
           <div className='testimonial_heading'>
-            <h2>What Clients Say</h2>
+            <h1>What Clients Say</h1>
           </div>
           <div className='heading_bar'>
               <h5>------------------------- o -------------------------</h5>
