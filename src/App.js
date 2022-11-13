@@ -7,7 +7,7 @@ import ScrollToTop from './components/scrollToTop';
 import Service from './components/service';
 import UserPreview from './components/userpreview';
 import Testimonial from './components/Testimonial';
-
+import Faq from './components/Faq'
 
 function App() {
 
@@ -29,6 +29,7 @@ function App() {
         <Service/>
         <AboutUs/>
         <Testimonial/>
+        <Faq/>
         <ContactUs/>   
       </div>
         { scrollToTopButton && <ScrollToTop setScrollToTopButton={setScrollToTopButton}/>}

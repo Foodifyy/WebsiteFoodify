@@ -1,31 +1,31 @@
-import React from 'react';
-import '../style/testimonial.css'
+import React from 'react'
+import { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import TestimonialCard from './TestimonialCard';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 function Testimonial() {
   return (
-        <div id="testimonial">
-          <div className='testimonial_heading'>
-            <h1>What Clients Say</h1>
-          </div>
-          <div className='heading_bar'>
-              <h5>------------------------- o -------------------------</h5>
-          </div>
-          <div className='testimonial_card'>
-            <div className='main_card'>
-              <div className='test_card'>
-                  <img src="logo192.png" className='clinet_image' alt="__"/>
-              </div>
-              <div className='client_name'>
-                  <p className='name_placeholder'>Client Name</p>
-              </div>
-              <div className='client_feedback'>
-                  <p className='feedback_placeholder'>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                  </p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div>
+      <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl shadow-black drop-shadow-md">WHAT PEOPLE SAYS</h2>
+         <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination]}
+            spaceBetween={10}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+        >
+            <SwiperSlide>{<TestimonialCard  index={1}/>}</SwiperSlide>
+            <SwiperSlide>{<TestimonialCard  index={2}/>}</SwiperSlide>
+            <SwiperSlide>{<TestimonialCard  index={3}/>}</SwiperSlide>
+        </Swiper>
+    </div>
   )
 }
 
