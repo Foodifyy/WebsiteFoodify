@@ -7,12 +7,11 @@ import ScrollToTop from './components/scrollToTop';
 import Service from './components/service';
 import UserPreview from './components/userpreview';
 import Testimonial from './components/Testimonial';
-import Faq from './components/Faq'
+import Faq from './components/Faq';
+import ThemeChangerCompnent from './components/ThemeChangerCompnent';
 
 function App() {
-
   const [scrollToTopButton, setScrollToTopButton] = useState(false)
-  
   window.addEventListener('scroll',()=>{
     if(window.scrollY > 200){
         setScrollToTopButton(true)
@@ -22,7 +21,9 @@ function App() {
   })
 
   return (
+    
     <div>      
+      <ThemeChangerCompnent/>
       {scrollToTopButton === false && <NavBar/>}
       <div>
         <UserPreview/>

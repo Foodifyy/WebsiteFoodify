@@ -1,11 +1,12 @@
-import React from 'react'
-import '../style/service.css'
+import React,{useContext} from 'react'
+import '../style/service.css';
+import {useThemeContext} from '../context/UsethemecontextProvider'
 
 const Service = () => {
-
+  const {state} = useContext(useThemeContext);
   return (
-    <div className='serviceContainer' id='service' > 
-      <div className='Head maxWidth'>
+    <div className={`serviceContainer  ${state.background}`} id='service' > 
+      <div className={`Head maxWidth ${state.font}`}>
         OUR TECHNOLOGY
       </div>
 

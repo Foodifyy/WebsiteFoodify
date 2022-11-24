@@ -2,13 +2,15 @@ import React from 'react'
 import '../style/navbr.css'
 import { Link } from 'react-scroll'
 import { useState } from 'react';
-import {VscChromeClose, VscMenu} from 'react-icons/vsc'
+import {VscChromeClose, VscMenu} from 'react-icons/vsc';
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
   
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
+
+  
   
   return (
     <div>
@@ -81,6 +83,7 @@ const NavBar = () => {
                 Contact Us
               </Link>
             </li>
+            
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             {click ? <VscChromeClose /> : <VscMenu />}
