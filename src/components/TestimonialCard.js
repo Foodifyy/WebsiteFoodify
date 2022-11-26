@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useContext} from 'react'
+import {useThemeContext} from '../context/UsethemecontextProvider'
 
 function TestimonialCard({index}) {
+  const {state} = useContext(useThemeContext);
+
   return (
-<div class="w-full h-screen flex flex-col items-center justify-center gap-8">
-    <h1 class="text-4xl text-gray-600 leading-relaxed text-center w-4/5">
+<div class={`w-full h-screen flex flex-col items-center justify-center gap-8 ${state.background} transition-all duration-300`}>
+    <h1 class={` text-4xl text-gray-600 leading-relaxed text-center w-4/5 ${state.font}`}>
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
     </h1>
     <div class="flex items-center gap-4">
@@ -11,8 +14,8 @@ function TestimonialCard({index}) {
             <img src="https://rairaksa.github.io/assets/img/rai.jpg" alt=""/>
         </div>
         <div class="flex flex-col tracking-wider">
-            <label class="text-gray-600 font-bold text-base">{index}</label>
-            <label class="text-gray-400 font-normal text-sm">Fullstack PHP Developer</label>
+            <label class={`text-gray-600 font-bold text-base ${state.font}`}>{index}</label>
+            <label class={`text-gray-400 font-normal text-sm ${state.font}`}>Fullstack PHP Developer</label>
         </div>
     </div>
 </div>

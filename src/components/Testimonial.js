@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import TestimonialCard from './TestimonialCard';
+import {useThemeContext} from '../context/UsethemecontextProvider'
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,9 +10,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 function Testimonial() {
+  const {state} = useContext(useThemeContext);
   return (
     <div>
-      <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl shadow-black drop-shadow-md">WHAT PEOPLE SAYS</h2>
+      <h2 className={`py-5 text-4xl font-bold leading-none text-center sm:text-5xl shadow-black drop-shadow-md ${state.background} ${state.font}`}>WHAT PEOPLE SAYS</h2>
          <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination]}

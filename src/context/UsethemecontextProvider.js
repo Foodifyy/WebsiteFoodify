@@ -6,7 +6,8 @@ import React,{useReducer}  from "react";
 let initialState = {
     flag:true,
     background:"bg-white",
-    font:"text-black"
+    font:"text-black",
+    
 }
 
 /**
@@ -16,7 +17,7 @@ const reducer = (state,action) =>{
     switch(action.type){
         case "CHANGE_TO_DARK":
             return {
-                background:"bg-[#151515]",
+                background:"bg-[#24262b]",
                 font:"text-white",
                 flag:false
             }

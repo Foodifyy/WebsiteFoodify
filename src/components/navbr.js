@@ -1,12 +1,29 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import '../style/navbr.css'
 import { Link } from 'react-scroll'
 import { useState } from 'react';
 import {VscChromeClose, VscMenu} from 'react-icons/vsc';
+import {useThemeContext} from '../context/UsethemecontextProvider'
+import Brightness5Icon from '@mui/icons-material/Brightness5';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+
+import IconButton from '@mui/material/IconButton';
+
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
-  
+  const {state,ChangeTheme} = useContext(useThemeContext)
+    function changeTheme(){
+        if(state.flag){
+          ChangeTheme({
+            type:"CHANGE_TO_DARK",
+          })
+        }else if(!state.flag){
+          ChangeTheme({
+            type:"CHANGE_TO_LIGHT",
+          })
+        }
+      }
   const handleClick = () => setClick(!click);
   const Close = () => setClick(false);
 
@@ -83,7 +100,14 @@ const NavBar = () => {
                 Contact Us
               </Link>
             </li>
-            
+            <li className="nav-item">
+                <IconButton  sx={{ ml: 1 }} onClick={changeTheme} color="inherit"> 
+                  {
+                    state.flag === true ? <Brightness4Icon/> : <Brightness5Icon/>
+                  }
+                </IconButton>
+                
+            </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>
             {click ? <VscChromeClose /> : <VscMenu />}

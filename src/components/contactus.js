@@ -1,17 +1,16 @@
 import React from 'react'
 import {FaLinkedin} from 'react-icons/fa'
 import { Link } from 'react-scroll'
-import '../style/contactus.css'
+import '../style/contactus.css';
 
 const ContactUs = () => {
-
   return (
-    <div id='contact'> 
+    <div id='contact '> 
     
-      <footer className="footer">
-      <div className="container">
-        <div className="row">
-          <div className="footer-col">
+      <footer className={`footer`}>
+      <div className={`container`}>
+        <div className={`row`}>
+          <div className="footer-col transition-all duration-300 ">
             <h4>Jump To</h4>
             <ul>
               <li><Link to='home' smooth={true} offset={-100} duration={700} className='navButton curPointer'>Home</Link></li>

@@ -8,7 +8,6 @@ import Service from './components/service';
 import UserPreview from './components/userpreview';
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
-import ThemeChangerCompnent from './components/ThemeChangerCompnent';
 
 function App() {
   const [scrollToTopButton, setScrollToTopButton] = useState(false)
@@ -23,7 +22,7 @@ function App() {
   return (
     
     <div>      
-      <ThemeChangerCompnent/>
+
       {scrollToTopButton === false && <NavBar/>}
       <div>
         <UserPreview/>

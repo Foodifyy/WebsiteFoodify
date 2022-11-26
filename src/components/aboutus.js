@@ -73,19 +73,19 @@ const AboutUs = () => {
   ]
 
   return (
-    <div className={`aboutUsContainer ${state.background}`} id='about'>
-      <div className={`Head maxWidth ${state.font}`}>
+    <div className={`aboutUsContainer ${state.background} transition-all duration-500`} id='about'>
+      <div className={`Head maxWidth ${state.font} `}>
         WHO ARE WE
       </div>
 
-      <div className='maxWidth cardContainer'>
+      <div className='maxWidth cardContainer '>
         {partnersArr.map(card => {
           return <PartnerCard key={card.id} name={card.name} designation={card.designation} pic={card.pic} alignSelf={card.alignSelf}/>
         })}
       </div>  
 
-      <div className='mottoContainer '>
-          <div className='mottos'>
+      <div className='mottoContainer'>
+          <div className='mottos '>
             {mottoArr.map(item => {
               return <div key={item.id} className="mottoBox">
                 <div className='mottoIcon'>
