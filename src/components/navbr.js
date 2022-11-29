@@ -35,7 +35,7 @@ const NavBar = () => {
       <nav className="navbar" onClick={e => e.stopPropagation()}>
         <div className="nav-container">
           <div className="nav-logo">
-          <img src={require('../assets/logoFoodify.png')} alt="foodify icon" className='foodifyIcon'/>
+          <img src={require('../assets/logoFoodify.png')} onClick={changeTheme} alt="foodify icon" className='foodifyIcon cursor-pointer'/>
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
@@ -99,14 +99,6 @@ const NavBar = () => {
                 </span> */}
                 Contact Us
               </Link>
-            </li>
-            <li className="nav-item">
-                <IconButton  sx={{ ml: 1 }} onClick={changeTheme} color="inherit"> 
-                  {
-                    state.flag === true ? <Brightness4Icon/> : <Brightness5Icon/>
-                  }
-                </IconButton>
-                
             </li>
           </ul>
           <div className="nav-icon" onClick={handleClick}>

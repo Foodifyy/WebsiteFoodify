@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import './App.css';
 import AboutUs from './components/aboutus';
-import ContactUs from './components/contactus';
 import NavBar from './components/navbr';
 import ScrollToTop from './components/scrollToTop';
 import Service from './components/service';
 import UserPreview from './components/userpreview';
 import Testimonial from './components/Testimonial';
 import Faq from './components/Faq';
+import Footer from './components/Footer';
 
 function App() {
   const [scrollToTopButton, setScrollToTopButton] = useState(false)
@@ -30,7 +29,7 @@ function App() {
         <AboutUs/>
         <Testimonial/>
         <Faq/>
-        <ContactUs/>   
+        <Footer/>   
       </div>
         { scrollToTopButton && <ScrollToTop setScrollToTopButton={setScrollToTopButton}/>}
     </div>

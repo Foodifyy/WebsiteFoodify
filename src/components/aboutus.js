@@ -73,8 +73,10 @@ const AboutUs = () => {
   ]
 
   return (
-    <div className={`aboutUsContainer ${state.background} transition-all duration-500`} id='about'>
-      <div className={`Head maxWidth ${state.font} `}>
+    <div className={`aboutUsContainer  transition-all duration-500`}
+      style={{backgroundColor:`${state.background}`}}
+    id='about'>
+      <div className={`Head maxWidth `} style={{color:state.flag ? "black" : "white"}}>
         WHO ARE WE
       </div>
 
