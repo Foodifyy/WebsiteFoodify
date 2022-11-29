@@ -16,35 +16,35 @@ const Service = () => {
             <img src={require('../assets/imageScanimg.PNG')} alt="featuring scan"/>
           </div>
           <div className='infoBox'>
-            <h1 className={`infoBoxHead ${state.font}`} > <strong >&#8968;</strong> FOOD SCANNING <strong style={{color:"#77efc7"}}>&#8971;</strong> </h1>
+            <h1 className={`infoBoxHead ${state.font} font-bold`} > <strong >&#8968;</strong> FOOD SCANNING <strong style={{color:"#77efc7"}}>&#8971;</strong> </h1>
             <p className={`infoBoxPara ${state.font}`} >Leveraging the use of AI to depict nutritional values of every day food items through your device camera.</p>
           </div>
         </div>
         
         <div className='feature' >
           <div className='infoBox'>
-            <h1 className={`infoBoxHead ${state.font}`} > <strong style={{color:"#77efc7"}}>&#8968;</strong> CALORIE & NUTRIENT TRACKING <strong style={{color:"#77efc7"}}>&#8971;</strong> </h1>
-            <p classNam={` ${state.font}`}>Record your daily detailed calorie intake, better control over food diet.</p>
+            <h1 className={`infoBoxHead ${state.font} font-bold`} > <strong style={{color:"#77efc7"}}>&#8968;</strong> CALORIE & NUTRIENT TRACKING <strong style={{color:"#77efc7"}}>&#8971;</strong> </h1>
+            <p className={` ${state.minifont} font-semibold text-lg`}>Record your daily detailed calorie intake, better control over food diet.</p>
           </div>
           <div className='imageBox'>
             <img src={require('../assets/foodTrackimg.PNG')} alt="featuring scan"/>
           </div>
         </div>
-
+    
         <div className='feature' >
           <div className='imageBox'>
             <img src={require('../assets/communityImg.PNG')} alt="featuring scan"/>
           </div>
           <div className='infoBox'>
-            <h1 className={`infoBoxPara ${state.font}`}> <strong style={{color:"#77efc7"}}>&#8968;</strong> COMMUNITY BUILDING & BRAND PROMOTION <strong style={{color:"#77efc7"}}>&#8971;</strong> </h1>
+            <h1 className={`infoBoxPara ${state.font} font-bold`}> <strong style={{color:"#77efc7"}}>&#8968;</strong> COMMUNITY BUILDING & BRAND PROMOTION <strong style={{color:"#77efc7"}}>&#8971;</strong> </h1>
             <p className={`infoBoxPara  ${state.font}`} >Community of Like-minded & Health conscious individuals, targeting ads to a specific domain, cheaper 'Cost Per Click' for brands. </p>
           </div>
         </div>
 
-        <div className='feature' >
-          <div className='infoBox'>
+        <div className='feature ' >
+          <div className='infoBox '>
             <h1 className='infoHeadButton curPointer absoluteCenter'>
-              <a className='linkDecor' href='https://foodify-axios-image-api-test.ishkapoor.repl.co/' target='_blank' rel='noreferrer'>
+              <a className='linkDecor btn-grad ' href='https://foodify-axios-image-api-test.ishkapoor.repl.co/' target='_blank' rel='noreferrer'>
                  TRY NOW 
               </a>
             </h1>

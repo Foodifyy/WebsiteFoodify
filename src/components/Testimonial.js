@@ -13,7 +13,7 @@ function Testimonial() {
   const {state} = useContext(useThemeContext);
   return (
     <div>
-      <h2 className={`py-5 text-4xl font-bold leading-none text-center sm:text-5xl shadow-black drop-shadow-md  ${state.font}`} style={{backgroundColor:state.flag ? "white" : "black"}}>WHAT PEOPLE SAYS</h2>
+      <h2 className={`py-5 text-4xl font-bold leading-none text-center sm:text-5xl shadow-black drop-shadow-md ${state.flag ? `bg-white text-black` : `bg-[#24262b]  text-white`}  `} >WHAT PEOPLE SAYS</h2>
          <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination]}

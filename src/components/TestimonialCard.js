@@ -6,7 +6,7 @@ function TestimonialCard({index}) {
 
   return (
 <div class={`w-full h-screen flex flex-col items-center justify-center gap-8  transition-all duration-300`} style={{backgroundColor:`${state.background}`}}>
-    <h1 class={` text-4xl text-gray-600 leading-relaxed text-center w-4/5 ${state.font}`}>
+    <h1 class={`font-medium text-4xl text-gray-600 leading-relaxed text-center w-4/5 ${state.font}`}>
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
     </h1>
     <div class="flex items-center gap-4">
