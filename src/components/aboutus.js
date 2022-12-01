@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import '../style/aboutus.css'
-import PartnerCard from './subcomponent/partnerCard'
+import PartnerCard from './subcomponent/partnerCard';
+import {useThemeContext} from '../context/UsethemecontextProvider'
 
 const AboutUs = () => {
+  const {state} = useContext(useThemeContext);
 
   const mottoArr = [
     {
@@ -28,7 +30,7 @@ const AboutUs = () => {
   const partnersArr = [
     {
       id : 1,
-      name : "Kuwar Kapoor",
+      name : "Kuwar Kapur",
       designation : "Backend & ML Engineer",
       pic : require('../assets/partnersImg/kuwar.jpg'),
       alignSelf : "flex-start"
@@ -43,7 +45,7 @@ const AboutUs = () => {
     {
       id : 3,
       name : "Ish Kapoor",
-      designation : "Product Manager",
+      designation : "Mentor",
       pic : require('../assets/partnersImg/ish.jpeg'),
       alignSelf : "flex-start"
     },
@@ -71,19 +73,21 @@ const AboutUs = () => {
   ]
 
   return (
-    <div className='aboutUsContainer' id='about'>
-      <div className='Head maxWidth'>
+    <div className={`aboutUsContainer  transition-all duration-500`}
+      style={{backgroundColor:`${state.background}`}}
+    id='about'>
+      <div className={`Head maxWidth `} style={{color:state.flag ? "black" : "white"}}>
         WHO ARE WE
       </div>
 
-      <div className='maxWidth cardContainer'>
+      <div className='maxWidth cardContainer '>
         {partnersArr.map(card => {
           return <PartnerCard key={card.id} name={card.name} designation={card.designation} pic={card.pic} alignSelf={card.alignSelf}/>
         })}
       </div>  
 
       <div className='mottoContainer'>
-          <div className='mottos'>
+          <div className='mottos '>
             {mottoArr.map(item => {
               return <div key={item.id} className="mottoBox">
                 <div className='mottoIcon'>
