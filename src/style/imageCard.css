@@ -1,0 +1,12 @@
+#cards::before{
+    position: absolute;
+    content: '';
+    background-color: black;
+    top:0px;
+    left:0px;
+    
+}
+
+#cards:hover{
+    background-color: black;
+}

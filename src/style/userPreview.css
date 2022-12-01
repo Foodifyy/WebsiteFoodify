@@ -36,6 +36,8 @@
 
 #heading{
     font-family: 'Baloo Bhaina 2';
+    font-weight: bold;
+    text-shadow: #02315a;
 }
 
 @media only screen and (max-width:1120px){

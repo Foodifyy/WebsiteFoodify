@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import '../style/aboutus.css'
-import PartnerCard from './subcomponent/partnerCard';
 import {useThemeContext} from '../context/UsethemecontextProvider'
+import ImageGallery from './ImageGallery';
 
 const AboutUs = () => {
   const {state} = useContext(useThemeContext);
@@ -79,13 +79,10 @@ const AboutUs = () => {
       <div className={`Head maxWidth `} style={{color:state.flag ? "black" : "white"}}>
         WHO ARE WE
       </div>
-
+      
       <div className='maxWidth cardContainer '>
-        {partnersArr.map(card => {
-          return <PartnerCard key={card.id} name={card.name} designation={card.designation} pic={card.pic} alignSelf={card.alignSelf}/>
-        })}
+        <ImageGallery staffimg={partnersArr} />
       </div>  
-
       <div className='mottoContainer'>
           <div className='mottos '>
             {mottoArr.map(item => {

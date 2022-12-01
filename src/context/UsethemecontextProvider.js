@@ -31,7 +31,8 @@ const reducer = (state,action) =>{
                 background:"#FFFFFF",
                 font:"text-[#000000]",
                 flag:true,
-                headingFont:"text-black"
+                headingFont:"text-black",
+                minifont:"text-black"
             }
         default:
             return state
