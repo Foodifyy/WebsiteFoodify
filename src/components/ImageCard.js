@@ -7,9 +7,9 @@ function ImageCard({staffimg,staffname,staffdesignation}) {
     return (
         <div className="flex flex-wrap w-1/3">
         <div className="w-full p-1 md:p-2">
-          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg " id="cards"
+          <img alt="gallery" className="block object-cover object-center w-full h-full rounded-lg bg-black" id="cards"
             src={staffimg}/>
-            <div className='relative left-5'>
+            <div className='relative left-2'>
                 <p className={`${state.font} text-xs lg:text-2xl  font-bold`}>{staffname}</p>
                 <p className={`${state.miniFont} text-xs font-medium lg:text-base`}>{staffdesignation}</p>
             </div>
