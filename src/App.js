@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import AboutUs from './components/aboutus';
-import ContactUs from './components/contactus';
-import Footer from './components/Footer';
+import AboutUs from './components/aboutus'; 
 import Header from './components/header';
 import NavBar from './components/navbr';
 import ScrollToTop from './components/scrollToTop';
 import Service from './components/service';
+import Footer from './components/Footer';
 // import UserPreview from './components/userpreview';
 
 
